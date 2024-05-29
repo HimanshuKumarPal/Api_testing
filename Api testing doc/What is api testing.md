@@ -114,3 +114,48 @@ Whenever you are communicating between client and server the data will be commun
 In JSON we have to represent data in the form of `["Key" : "Value"]` pair.
 
 ## JSON vs XML :-
+JSON | XML 
+--|--|
+JSON is simple to read and write |XML is less simple as compared to JSON
+It also supports array |It doesn't supports array
+JSON is more human-readable than XML files |XML is less human-readable
+It supports only text & number datatype |It supports many datatype such as text, number, images, charts, graphs etc.
+
+
+### NOTE :- 
+There is a library provided by Postman that is called "pm".In pm library there are so many functions are available.
+
+## Types of functions :-
+There are two types of function we used in Postman to check any assertion on a API.
+- Normal function
+- Arrow function
+
+Normal function | Arrow function
+--|--|
+pm.test("Test name", function()| pm.test("Test name",() =>
+{                              |{
+  //assertion;                 |  //assertion;
+})                             |}
+
+## Scripts :-
+There are two place where we can write our scripts in Postman -
+- Tests = (After request & response is completed)
+- Pre-request scripts = (Executed before starting the request)
+
+**Pre-request script------------>Request----------->Response-------------->Tests script**
+
+Pre-request & test script is available in three levels -
+1. Collection
+2. Folder
+3. Request
+
+## Variable :-
+We can create variables at following levels(scope) =>
+1. Global - (accessible workspace level)
+2. Collection - (accessible collection level)
+3. Environment - (accessible all collections, but need to change environment)
+4. Local - (accessible request level)
+5. Data - (external files [CSV/text])
+
+## Chaining of API's :-
+API 

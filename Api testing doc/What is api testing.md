@@ -159,10 +159,14 @@ We can create variables at following levels(scope) =>
 
 #### Important notes
 - All local variables (request level variables) are created under `Pre-request script`.
-- We can create `Global`,`Environment` & `Collection` variables under a request
+- We can create `Global`,`Environment` & `Collection` variables under a request 
 
   For ex:- 
-     `pm.variables.set("restful_local","https://restful-booker.herokuapp.com");`
+     `pm.environment.set("restful_local","https://restful-booker.herokuapp.com");`
+- After creating `Global`,`Environment` & `Collection` variables under a request if we want to delete them after getting the response we use unset() in post-response section.
+
+   For ex:- 
+     `pm.globals.unset("variable name");`
 
 ## Chaining of API's :-
 API 

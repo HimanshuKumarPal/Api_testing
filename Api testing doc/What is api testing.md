@@ -157,6 +157,12 @@ We can create variables at following levels(scope) =>
 4. Local - (accessible request level)
 5. Data - (external files [CSV/text])
 
-- Note - All local variables (request level variables) are created under `Pre-request script`.
+#### Important notes
+- All local variables (request level variables) are created under `Pre-request script`.
+- We can create `Global`,`Environment` & `Collection` variables under a request
+
+  For ex:- 
+     `pm.variables.set("restful_local","https://restful-booker.herokuapp.com");`
+
 ## Chaining of API's :-
 API 

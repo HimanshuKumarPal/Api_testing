@@ -167,6 +167,12 @@ We can create variables at following levels(scope) =>
 
    For ex:- 
      `pm.globals.unset("variable name");`
+- To get & print the all different variables data in console window enter the following script under post-response section -
+
+      console.log(pm.globals.get("variable name"));
+      console.log(pm.collectionVariables.get("variable name"));
+      console.log(pm.environment.get("variable name"));
+ 
 
 ## Chaining of API's :-
 API 

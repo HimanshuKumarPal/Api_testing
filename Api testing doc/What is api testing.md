@@ -175,4 +175,61 @@ We can create variables at following levels(scope) =>
  
 
 ## Chaining of API's :-
-API 
+"API chaining in Postman is a technique that allows you to extract data from the response of one API request and use it as input for another API request". 
+This way, you can create a sequence of API calls that depend on each other and test complex scenarios without manually coping and pasting data.
+
+
+     ┌───────────┐      ┌───────────┐      ┌───────────┐
+     │ Request 1 │----->│  API 1    │----->│ Response  │
+     └───────────┘      └───────────┘      └───────────┘
+                                               │
+                                               │
+                                               ▼
+     ┌───────────┐      ┌───────────┐      ┌───────────┐
+     │ Response  │<-----│  API 2    │<-----│ Request 2 │
+     └───────────┘      └───────────┘      └───────────┘
+
+
+## Authorization :- 
+We can add The `Bearer token` authorization at collection even instead of every request.
+
+NOTE - For every request under that collection each request authorization must be set to [inherit auth from parent].
+
+## What is Data-driven testing (DDT) :-
+
+Data-driven testing (DDT) is a software testing methodology where test scripts are designed to execute a series of test cases using input data from external sources such as databases, spreadsheets, CSV files, or any other data repositories. The primary goal of data-driven testing is to increase test coverage by running the same test logic with multiple sets of data, thereby validating different scenarios and edge cases efficiently.
+
+**Here's an explanation of how data-driven testing works:**
+
+- Identify Test Scenarios: First, you identify the test scenarios that need to be validated. These scenarios can range from basic functionality to complex workflows.
+- Define Test Data: Next, you gather or generate test data that covers various input combinations, including valid, invalid, and boundary cases. This data is typically stored externally in a format that can be easily accessed by the test script.
+- Develop Test Scripts: You create test scripts that are capable of reading test data from external sources and executing the test logic for each set of data. These scripts should be designed to be reusable and modular to accommodate different data sets.
+- Execute Tests: The test script iterates through each set of test data, feeding it into the system under test (SUT) and verifying the expected outcomes against the actual results. Each iteration of the test is considered a test case.
+- Report Results: During test execution, results are captured for each test case, including pass/fail status and any relevant details or errors encountered. These results are then compiled into a test report for analysis.
+
+## Benefits of Data-Driven Testing :-
+
+1. Improved Test Coverage: DDT allows for testing a wide range of input data combinations, helping to identify defects in different scenarios and edge cases.
+2. Reusability: Test scripts can be reused with different sets of data, reducing the effort required to maintain and update test suites.
+3. Efficiency: By automating the execution of tests with multiple data sets, DDT helps save time and effort compared to manual testing.
+4. Maintainability: Since test data is stored externally, it's easier to update or modify test cases without changing the underlying test logic.
+5. Early Defect Detection: DDT helps in detecting defects early in the development cycle by running tests with diverse data sets, enabling quicker resolution of issues.
+6. Overall, data-driven testing is a valuable approach for ensuring software quality by systematically testing various input combinations and scenarios, leading to more robust and reliable software products.
+
+
+## How to perform DDT in postman :- 
+In Postman, data-driven testing involves using external data sources to drive the execution of API tests. This is typically achieved using the "Collection Runner" feature in Postman combined with external data files like CSV, JSON, or spreadsheets.
+
+**Here's how you can perform data-driven testing in Postman:**
+
+- `Create API Tests:` First, create your API tests using Postman's intuitive interface. These tests can include requests to your API endpoints along with assertions to verify the expected responses.
+- `Prepare Data Source:` Prepare your test data in an external file such as a CSV, JSON, or spreadsheet. Each row in the data file represents a set of input values for your API requests. For example, if you're testing a user registration endpoint, each row might contain different combinations of username, email, and password.
+- `Set Up Environment Variables (Optional):` If your API requests use dynamic data (e.g., authentication tokens), you can set up environment variables in Postman to store and reuse this data across multiple requests.
+- `Configure Collection Runner:` Open the Postman app and navigate to the collection containing your API tests. Click on the "Runner" button to open the Collection Runner. Here, you can select the collection to run and specify the data file to use for data-driven testing.
+- `Run Tests:` Start the Collection Runner, and Postman will execute your API tests iteratively for each set of data from the data file. For each iteration, the variables in your requests will be replaced with values from the corresponding row in the data file.
+- `View Results:` After the tests have completed execution, you can view the results in the Collection Runner interface. Postman will provide detailed information about the status of each request, including whether it passed or failed, along with any assertions that were evaluated.
+
+
+
+
+

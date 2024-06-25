@@ -230,6 +230,27 @@ In Postman, data-driven testing involves using external data sources to drive th
 - `View Results:` After the tests have completed execution, you can view the results in the Collection Runner interface. Postman will provide detailed information about the status of each request, including whether it passed or failed, along with any assertions that were evaluated.
 
 
+## What is RestAssured :- 
+
+RestAssured is a Java library that provides a domain-specific language (DSL) for writing powerful and maintainable automated tests for RESTful APIs. It simplifies the process of sending HTTP requests and validating responses, making it easier to perform integration testing on API endpoints.
+
+Key features of RestAssured include:
+
+1. **DSL for Requests**: Allows you to construct HTTP requests (GET, POST, PUT, DELETE, etc.) using a fluent interface, making the code readable and concise.
+
+2. **Validation of Responses**: Provides built-in assertions to validate response status codes, headers, body content (JSON, XML, etc.), and more.
+
+3. **Support for Authentication**: Supports various authentication mechanisms (basic, digest, OAuth, etc.) to simulate different authorization scenarios.
+
+4. **Handling Cookies and Sessions**: Enables handling of cookies and sessions for scenarios requiring stateful interactions.
+
+5. **Integration with Testing Frameworks**: Integrates seamlessly with popular testing frameworks like JUnit and TestNG, allowing API tests to be executed alongside other tests.
+
+6. **Logging and Error Handling**: Includes logging capabilities for request/response details and provides mechanisms to handle errors gracefully.
+
+RestAssured is widely used in automated testing for REST APIs due to its simplicity, expressiveness, and the ease with which tests can be written and maintained. It's particularly useful for API testing in Java-based projects where there's a need for comprehensive API validation and integration testing.
+
+
 
 
 

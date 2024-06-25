@@ -251,6 +251,51 @@ Key features of RestAssured include:
 RestAssured is widely used in automated testing for REST APIs due to its simplicity, expressiveness, and the ease with which tests can be written and maintained. It's particularly useful for API testing in Java-based projects where there's a need for comprehensive API validation and integration testing.
 
 
+## Structure of Maven Project :-
 
+A Maven project follows a specific directory structure that helps organize source code, resources, and configuration files in a standardized way. Here’s the typical structure of a Maven project along with explanations for each directory and file:
 
+```
+project-root
+│
+├── pom.xml
+├── src
+│   ├── main
+│   │   ├── java
+│   │   │   └── package
+│   │   │       └── (source files)
+│   │   ├── resources
+│   │   │   └── (resource files)
+│   │   └── webapp (for web applications)
+│   │       └── (web application resources)
+│   └── test
+│       ├── java
+│       │   └── package
+│       │       └── (test source files)
+│       └── resources
+│           └── (test resource files)
+└── target
+    └── (compiled output and build artifacts)
+```
 
+### Explanation of the Structure:
+
+1. **`pom.xml`**: This is the Project Object Model (POM) file for Maven. It is an XML file that contains information about the project and configuration details to build the project, such as dependencies, plugins, build profiles, and more.
+
+2. **`src`**: This directory contains all the source code and resources for the project.
+
+   - **`main`**: This directory contains the main source code and resources for your application.
+
+     - **`java`**: Contains Java source files (.java) organized into packages. This is where your application’s Java code resides.
+
+     - **`resources`**: Contains non-Java resources used by the application, such as property files, XML configuration files, etc.
+
+     - **`webapp`** (for web applications): If your project is a web application, this directory contains resources like HTML files, JSP files, web.xml, and other static content.
+
+   - **`test`**: This directory contains the test source code and resources.
+
+     - **`java`**: Contains Java source files (.java) for unit tests. This mirrors the structure of the `main/java` directory but contains test-specific code.
+
+     - **`resources`**: Contains resources required for testing, such as test-specific configuration files, test data files, etc.
+
+3. **`target`**: This directory is where Maven stores all the compiled output, packaged JARs/WARs, and other build artifacts. It is created during the build process and typically contains subdirectories like `classes` (compiled .class files), `test-classes` (compiled test .class files), and the final artifact (e.g., `project-name.jar` or `project-name.war`).

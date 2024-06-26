@@ -299,3 +299,51 @@ project-root
      - **`resources`**: Contains resources required for testing, such as test-specific configuration files, test data files, etc.
 
 3. **`target`**: This directory is where Maven stores all the compiled output, packaged JARs/WARs, and other build artifacts. It is created during the build process and typically contains subdirectories like `classes` (compiled .class files), `test-classes` (compiled test .class files), and the final artifact (e.g., `project-name.jar` or `project-name.war`).
+
+## What is Gherkin language:-
+
+Gherkin is a domain-specific language used in behavior-driven development (BDD) to describe software behavior without detailing how that functionality is implemented. It is used to write human-readable tests that describe the behavior of a system in a way that non-technical stakeholders can understand. Gherkin syntax is simple and structured to facilitate communication between technical and non-technical team members.
+
+## Key Features of Gherkin :-
+
+1. **Readable by Humans and Machines**: Gherkin is designed to be easy to read by both humans and machines, enabling clear communication between all stakeholders.
+  
+2. **Given-When-Then Structure**: Scenarios in Gherkin are written in a Given-When-Then format:
+   - **Given**: Describes the initial context of the system.
+   - **When**: Describes an action or event.
+   - **Then**: Describes the expected outcome.
+
+3. **Feature Files**: Gherkin scenarios are stored in feature files, which usually have a `.feature` extension.
+
+4. **Keywords**: Common keywords in Gherkin include:
+   - **Feature**: A high-level description of a software feature.
+   - **Scenario**: A concrete example of a feature's behavior.
+   - **Given**: The initial context or setup.
+   - **When**: The action or event that triggers the behavior.
+   - **Then**: The expected outcome.
+   - **And**: Used to add more Given, When, or Then steps.
+   - **But**: Used to add a negative condition to a step.
+
+## Example of Gherkin Syntax :-
+
+```gherkin
+Feature: Login functionality
+
+  Scenario: Successful login
+    Given the user is on the login page
+    When the user enters valid credentials
+    Then the user is redirected to the dashboard
+
+  Scenario: Unsuccessful login
+    Given the user is on the login page
+    When the user enters invalid credentials
+    Then an error message is displayed
+```
+
+In this example:
+- The **Feature** keyword provides a high-level description of the login functionality.
+- Each **Scenario** provides a specific example of how the login functionality should behave under certain conditions.
+- The **Given-When-Then** structure describes the steps for each scenario.
+
+Gherkin is primarily used with BDD frameworks such as Cucumber, SpecFlow, and Behave, which parse the Gherkin feature files and execute the corresponding test code.
+
